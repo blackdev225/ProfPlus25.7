@@ -470,7 +470,7 @@ export class MemStorage implements IStorage {
       const updated = { 
         ...existing, 
         courseId: courseId ?? existing.courseId, 
-        progress: Math.max(existing.progress, progress),
+        progress: Math.max(existing.progress || 0, progress || 0),
         lastAccessedAt: new Date()
       };
       this.userProgress.set(key, updated);

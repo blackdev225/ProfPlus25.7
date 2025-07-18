@@ -83,9 +83,11 @@ export function SidebarNav({ user }: SidebarNavProps) {
                 Élève niveau {user?.grade || "N/A"}
               </p>
             </div>
-            <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600">
-              <Settings className="w-4 h-4" />
-            </Button>
+            <Link href="/profile">
+              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600">
+                <Settings className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
