@@ -87,35 +87,35 @@ export class MemStorage implements IStorage {
 
     // Initialize subjects
     const subjectsData: Subject[] = [
-      { id: 1, name: "Mathématiques", slug: "math", icon: "calculator", color: "hsl(0, 72%, 51%)" },
-      { id: 2, name: "Français", slug: "french", icon: "feather", color: "hsl(258, 90%, 66%)" },
-      { id: 3, name: "Physique", slug: "physics", icon: "atom", color: "hsl(45, 93%, 47%)" },
-      { id: 4, name: "Chimie", slug: "chemistry", icon: "flask", color: "hsl(142, 71%, 45%)" },
-      { id: 5, name: "Histoire", slug: "history", icon: "landmark", color: "hsl(25, 95%, 53%)" },
-      { id: 6, name: "Anglais", slug: "english", icon: "globe", color: "hsl(217, 91%, 60%)" }
+      { id: 1, name: "Mathématiques", slug: "math", icon: "calculator", color: "hsl(0, 72%, 51%)", description: "Calculs, géométrie et algèbre" },
+      { id: 2, name: "Français", slug: "french", icon: "feather", color: "hsl(258, 90%, 66%)", description: "Littérature, grammaire et expression" },
+      { id: 3, name: "Physique", slug: "physics", icon: "atom", color: "hsl(45, 93%, 47%)", description: "Mécanique, optique et électricité" },
+      { id: 4, name: "Chimie", slug: "chemistry", icon: "flask", color: "hsl(142, 71%, 45%)", description: "Réactions chimiques et molécules" },
+      { id: 5, name: "Histoire", slug: "history", icon: "landmark", color: "hsl(25, 95%, 53%)", description: "Histoire contemporaine et relations internationales" },
+      { id: 6, name: "Anglais", slug: "english", icon: "globe", color: "hsl(217, 91%, 60%)", description: "Langue anglaise et culture" }
     ];
     
     subjectsData.forEach(subject => this.subjects.set(subject.id, subject));
 
-    // Initialize History course with real content
+    // Initialize History course with comprehensive content
     const historyCourse: Course = {
       id: 1,
       subjectId: 5, // History
       title: "Les relations UE/ACP : un exemple de coopération Nord-Sud",
       slug: "relations-ue-acp",
       content: {
-        introduction: "La coopération entre l'Union Européenne (UE) et les pays d'Afrique, des Caraïbes et du Pacifique (ACP), remonte au traité de Rome du 25 Mars 1957, instituant la communauté économique Européenne (CEE) par 6 États décidés à construire une organisation économique en association avec leurs anciennes colonies.",
+        introduction: "La coopération entre l'Union Européenne (UE) et les pays d'Afrique, des Caraïbes et du Pacifique (ACP), remonte au traité de Rome du 25 Mars 1957, instituant la communauté économique Européenne (CEE) par 6 États décidés à construire une organisation économique en association avec leurs anciennes colonies. Cette coopération dénommée « relations UE/ACP » a établi une forme unique au monde de coopération entre deux catégories de pays, ceux du Nord développés et ceux du Sud sous-développés.",
         sections: [
           {
             title: "Les relations UE/ACP : des relations mettant en rapport deux groupes de pays",
             subsections: [
               {
                 title: "Les pays UE et leurs caractéristiques",
-                content: "Les pays de l'UE sont l'Allemagne de l'Ouest (RFA), la Belgique, la France, l'Italie, le Luxembourg, les Pays-Bas (« l'Europe des Six »). L'UE est établit le 1er novembre 1993 remplaçant la CEE créée en 1957 par la mise en vigueur du traité de Maastricht. Aujourd'hui l'UE compte 26 pays membres après la sortie du Royaume-Uni en 2020 suite au Brexit."
+                content: "Les pays de l'UE sont l'Allemagne de l'Ouest (RFA), la Belgique, la France, l'Italie, le Luxembourg, les Pays-Bas (« l'Europe des Six »). L'UE est établie le 1er novembre 1993 remplaçant la CEE créée en 1957 par la mise en vigueur du traité de Maastricht (Hollande). Ce traité, après un accord conclu le 10 décembre 1991 lors du Conseil européen, a permis la mise en place de la citoyenneté européenne, le droit de circuler et de séjourner librement sur le territoire des pays membres, et la réalisation d'une véritable Union Économique et Monétaire (UEM) avec l'Euro mis en circulation le 1er janvier 2002. Aujourd'hui l'UE compte 26 pays membres après la sortie du Royaume-Uni en 2020 suite au Brexit. Ces États se retrouvent dans l'hémisphère Nord et sont appelés « pays du Nord ». Le secteur d'activité le plus développé est le secteur industriel, ils sont développés et leur économie est dominée par les productions industrielles et manufacturières. Les pays UE sont les anciennes puissances colonisatrices des pays ACP."
               },
               {
                 title: "Les pays ACP et leurs caractéristiques", 
-                content: "Ces pays se retrouvent dans l'hémisphère Sud. Le secteur d'activité le plus développé dans ces pays du Sud c'est le secteur primaire, surtout l'agriculture. Leur économie est dominée par les productions de matières premières agricoles auxquelles il faut ajouter les ressources naturelles."
+                content: "Les pays ACP (Afrique, Caraïbes et Pacifique) se retrouvent dans l'hémisphère Sud. Le secteur d'activité le plus développé dans ces pays du Sud c'est le secteur primaire, surtout l'agriculture. Leur économie est dominée par les productions de matières premières agricoles auxquelles il faut ajouter les ressources naturelles. Ces pays sont peu développés, ce sont des pays sous-développés, des pays pauvres. Les pays ACP ont été les anciennes colonies des pays UE."
               }
             ]
           },
@@ -124,7 +124,11 @@ export class MemStorage implements IStorage {
             subsections: [
               {
                 title: "Les origines des relations UE/ACP",
-                content: "L'origine de la CEE remonte à la création de la CECA (Communauté Economique pour le Charbon et l'Acier) le 02 avril 1951. Les premiers accords signés sont les accords de Yaoundé signés le 20 juillet 1963."
+                content: "L'origine de la CEE remonte à la création de la CECA (Communauté Économique pour le Charbon et l'Acier) le 02 avril 1951. L'objectif était l'instauration d'un marché unique pour trois produits : charbon, fer et acier. Le 25 mars 1957, la signature du traité de Rome fait naître la CEE avec six pays et les TOM (territoires d'outre-mer). Les raisons de cette mise en relation sont la création d'une zone de libre-échange pour permettre aux produits tropicaux africains de trouver de nouveaux débouchés en Europe, et faciliter l'écoulement des produits industriels européens en Afrique. Pour rendre efficaces ces relations, la CEE a créé un Fonds européen de développement (FED) alimenté par des cotisations nationales européennes. Les premiers accords sont les accords de Yaoundé signés le 20 juillet 1963, entrés en vigueur le 1er juin 1964, entre la CEE et les dix-huit États africains et malgaches unis (EAMA). En janvier 1973, la Grande-Bretagne adhère à la CEE, entraînant avec elle ses anciennes colonies qui transforment les EAMA en pays ACP. Le 1er novembre 1993, le traité de Maastricht entre en vigueur, la CEE devient l'UE et les relations deviennent les relations UE/ACP."
+              },
+              {
+                title: "Les différents accords UE/ACP et leurs contenus",
+                content: "Les structures créées pour promouvoir cette coopération sont : le conseil des ministres (organe de décision réglant les problèmes posés par l'application de la convention) avec un comité d'ambassadeurs, et l'assemblée consultative composée de deux représentants par État ACP et un nombre égal de représentants du parlement européen. L'Accord place l'Union européenne et les pays ACP dans une relation contractuelle entre partenaires égaux avec un champ extrêmement large anticipant l'Agenda 2030 pour le développement durable."
               }
             ]
           },
@@ -133,19 +137,19 @@ export class MemStorage implements IStorage {
             subsections: [
               {
                 title: "Les forces des relations UE/ACP",
-                content: "Mise en place d'une relation contractuelle entre partenaires égaux couvrant un champ extrêmement large avec pour objectif le développement durable; l'accroissement de la coopération sur les questions de sécurité et amorcé une coopération sur les migrations; les progrès majeurs en matière de développement social et humain."
+                content: "• Mise en place d'une relation contractuelle entre partenaires égaux couvrant un champ extrêmement large avec pour objectif le développement durable\n• Accroissement de la coopération sur les questions de sécurité et amorce d'une coopération sur les migrations\n• Progrès majeurs en matière de développement social et humain, ainsi que dans la stabilisation macroéconomique des ACP\n• Accords de libre-échange régionaux : les accords de partenariat économique (APE) permettant un accès privilégié des pays ACP au marché européen\n• Octroi de bourses d'étude aux étudiants et hauts cadres originaires des pays ACP\n• Actions en faveur des pays ACP : lutte contre la désertification et la famine, soutien financier dans la lutte contre le SIDA\n• Octroi de prêts de la BEI (Banque Européenne d'Investissement) aux conditions spéciales de remboursement\n• Mise en place du FED (Fonds Européen de Développement) avec ses instruments Stabex pour les aides au secteur agricole et Sysmin pour les aides au secteur minier"
               },
               {
                 title: "Les faiblesses des relations UE/ACP", 
-                content: "Les limites du partenariat dans sa dimension politique; un manque de résultats sur les grands sujets liés aux défis globaux; la mise en place de relation inéquitable car les échanges commerciaux entre l'UE et les ACP prenaient la forme d'accords asymétriques."
+                content: "• Les limites du partenariat dans sa dimension politique\n• Un manque de résultats sur les grands sujets liés aux défis globaux, notamment pour la négociation de l'Agenda 2030 et les objectifs relatifs aux changements climatiques\n• La mise en place de relations inéquitables car les échanges commerciaux entre l'UE et les ACP prenaient la forme d'accords asymétriques\n• Les APE ont révélé le caractère dissymétrique du partenariat dans les faits et fragilisé l'unité du Groupe ACP\n• La détérioration des termes de l'échange\n• Les APE sont davantage réclamés par l'UE que par les ACP, les pays les moins avancés (PMA) y voyant un intérêt limité"
               }
             ]
           }
         ],
-        conclusion: "Les relations UE/ACP naissent avec la création de la CEE consistée de pays européens en 1957 et la volonté de celle-ci de garder des liens avec les TOM. Les relations UE/ACP est un bel exemple de coopération NORD/SUD malgré ses insuffisances."
+        conclusion: "Les relations UE/ACP naissent avec la création de la CEE constituée de pays européens en 1957 et la volonté de celle-ci de garder des liens avec les TOM. Les relations UE/ACP sont un bel exemple de coopération Nord-Sud malgré leurs insuffisances et les défis qui restent à relever pour établir un partenariat plus équitable."
       },
       difficulty: "intermediate",
-      estimatedTime: 45,
+      estimatedTime: 60,
       createdAt: new Date()
     };
     this.courses.set(1, historyCourse);
@@ -295,7 +299,7 @@ export class MemStorage implements IStorage {
         id: index + 1,
         userId: data.userId,
         subjectId: data.subjectId,
-        courseId: data.subjectId === 5 ? 1 : undefined,
+        courseId: data.subjectId === 5 ? 1 : null,
         progress: data.progress,
         lastAccessedAt: new Date()
       };
@@ -363,7 +367,13 @@ export class MemStorage implements IStorage {
 
   async createUser(insertUser: InsertUser): Promise<User> {
     const id = this.currentUserId++;
-    const user: User = { ...insertUser, id, createdAt: new Date() };
+    const user: User = { 
+      ...insertUser, 
+      id, 
+      totalPoints: insertUser.totalPoints ?? null,
+      streak: insertUser.streak ?? null,
+      createdAt: new Date() 
+    };
     this.users.set(id, user);
     return user;
   }
@@ -388,7 +398,11 @@ export class MemStorage implements IStorage {
 
   async createSubject(insertSubject: InsertSubject): Promise<Subject> {
     const id = this.currentSubjectId++;
-    const subject: Subject = { ...insertSubject, id };
+    const subject: Subject = { 
+      ...insertSubject, 
+      id,
+      description: insertSubject.description ?? null
+    };
     this.subjects.set(id, subject);
     return subject;
   }
@@ -408,7 +422,12 @@ export class MemStorage implements IStorage {
 
   async createCourse(insertCourse: InsertCourse): Promise<Course> {
     const id = this.currentCourseId++;
-    const course: Course = { ...insertCourse, id, createdAt: new Date() };
+    const course: Course = { 
+      ...insertCourse, 
+      id, 
+      estimatedTime: insertCourse.estimatedTime ?? null,
+      createdAt: new Date() 
+    };
     this.courses.set(id, course);
     return course;
   }
@@ -424,7 +443,12 @@ export class MemStorage implements IStorage {
 
   async createExercise(insertExercise: InsertExercise): Promise<Exercise> {
     const id = this.currentExerciseId++;
-    const exercise: Exercise = { ...insertExercise, id, createdAt: new Date() };
+    const exercise: Exercise = { 
+      ...insertExercise, 
+      id, 
+      points: insertExercise.points ?? null,
+      createdAt: new Date() 
+    };
     this.exercises.set(id, exercise);
     return exercise;
   }
@@ -438,14 +462,14 @@ export class MemStorage implements IStorage {
     return this.userProgress.get(`${userId}-${subjectId}`);
   }
 
-  async updateUserProgress(userId: number, subjectId: number, courseId: number, progress: number): Promise<UserProgress> {
+  async updateUserProgress(userId: number, subjectId: number, courseId: number | null, progress: number): Promise<UserProgress> {
     const key = `${userId}-${subjectId}`;
     const existing = this.userProgress.get(key);
     
     if (existing) {
       const updated = { 
         ...existing, 
-        courseId: courseId || existing.courseId, 
+        courseId: courseId ?? existing.courseId, 
         progress: Math.max(existing.progress, progress),
         lastAccessedAt: new Date()
       };
@@ -473,7 +497,12 @@ export class MemStorage implements IStorage {
 
   async createExerciseResult(insertResult: InsertExerciseResult): Promise<ExerciseResult> {
     const id = this.currentResultId++;
-    const result: ExerciseResult = { ...insertResult, id, completedAt: new Date() };
+    const result: ExerciseResult = { 
+      ...insertResult, 
+      id, 
+      answers: insertResult.answers ?? null,
+      completedAt: new Date() 
+    };
     this.exerciseResults.set(`${result.userId}-${result.exerciseId}`, result);
     return result;
   }
@@ -520,7 +549,11 @@ export class MemStorage implements IStorage {
 
   async createAppointment(insertAppointment: InsertAppointment): Promise<Appointment> {
     const id = this.currentAppointmentId++;
-    const appointment: Appointment = { ...insertAppointment, id };
+    const appointment: Appointment = { 
+      ...insertAppointment, 
+      id,
+      status: insertAppointment.status ?? null
+    };
     this.appointments.set(id, appointment);
     return appointment;
   }
