@@ -78,12 +78,12 @@ export default function Schedule() {
     <div className="flex min-h-screen bg-gray-50">
       <SidebarNav user={user} />
       
-      <div className="flex-1 ml-64">
-        <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
-          <div className="flex items-center justify-between">
+      <div className="flex-1 lg:ml-64 pt-16 lg:pt-0">
+        <header className="bg-white shadow-sm border-b border-gray-200 px-4 lg:px-6 py-4">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Mon Planning</h1>
-              <p className="text-gray-600 mt-1">
+              <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Mon Planning</h1>
+              <p className="text-sm lg:text-base text-gray-600 mt-1">
                 Gérez vos rendez-vous et sessions d'étude
               </p>
             </div>
@@ -94,8 +94,8 @@ export default function Schedule() {
           </div>
         </header>
 
-        <main className="p-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <main className="p-4 lg:p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
             {/* Calendar Widget */}
             <Card className="lg:col-span-1">
               <CardHeader>

@@ -81,21 +81,21 @@ export default function ProgressPage() {
     <div className="flex min-h-screen bg-gray-50">
       <SidebarNav user={user} />
       
-      <div className="flex-1 ml-64">
-        <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
+      <div className="flex-1 lg:ml-64 pt-16 lg:pt-0">
+        <header className="bg-white shadow-sm border-b border-gray-200 px-4 lg:px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Ma Progression</h1>
-              <p className="text-gray-600 mt-1">
+              <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Ma Progression</h1>
+              <p className="text-sm lg:text-base text-gray-600 mt-1">
                 Suivez votre évolution et vos performances
               </p>
             </div>
           </div>
         </header>
 
-        <main className="p-6">
+        <main className="p-4 lg:p-6">
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-6">
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-center">

@@ -39,10 +39,10 @@ export default function Dashboard() {
         <div className="w-64 bg-white shadow-lg border-r border-gray-200">
           <Skeleton className="h-full" />
         </div>
-        <div className="flex-1 ml-64">
-          <div className="p-6 space-y-6">
+        <div className="flex-1 lg:ml-64 pt-16 lg:pt-0">
+          <div className="p-4 lg:p-6 space-y-6">
             <Skeleton className="h-32 w-full" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
               <Skeleton className="h-24" />
               <Skeleton className="h-24" />
               <Skeleton className="h-24" />
@@ -57,9 +57,9 @@ export default function Dashboard() {
     <div className="flex min-h-screen bg-gray-50">
       <SidebarNav user={user} />
       
-      <div className="flex-1 ml-64">
+      <div className="flex-1 lg:ml-64 pt-16 lg:pt-0">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
+        <header className="bg-white shadow-sm border-b border-gray-200 px-4 lg:px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
@@ -91,10 +91,10 @@ export default function Dashboard() {
         </header>
 
         {/* Main Content */}
-        <main className="p-6">
+        <main className="p-4 lg:p-6">
           <StatsCards stats={dailyStats} />
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mt-6 lg:mt-8">
             <SubjectProgress subjects={subjects} progress={progress} />
             <RecentActivity userId={user?.id} />
           </div>

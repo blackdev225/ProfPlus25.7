@@ -78,7 +78,7 @@ export default function HistoryCourse() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto max-w-4xl p-6">
+      <div className="container mx-auto max-w-4xl p-4 lg:p-6">
         {/* Header */}
         <div className="mb-6">
           <Button 
@@ -94,14 +94,14 @@ export default function HistoryCourse() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-2xl text-gray-900">
+                  <CardTitle className="text-xl lg:text-2xl text-gray-900">
                     {course.title}
                   </CardTitle>
                   <p className="text-gray-600 mt-2">
                     Un exemple de coopération Nord-Sud
                   </p>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-4">
                   <Badge variant="secondary" className="flex items-center space-x-1">
                     <Clock className="w-3 h-3" />
                     <span>{course.estimatedTime} min</span>
